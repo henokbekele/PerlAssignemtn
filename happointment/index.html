@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Easy appointment application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/appointment.js"></script>
+ 
+</head>
+<body>
+
+<div class="container">
+
+<div class="messeagebar">
+  Easy appointment application
+</div>
+
+
+<div>
+  <button id="newApptButn" class="btn-primary">New</button>
+</div>
+
+ 
+<form hidden   id="formAddAppointment" method="POST" action="/cgi-bin/cgi_happointment/addAppointment.pl" >
+
+<div class="row">
+  <div class="col-sm-10">
+    <button   class="btn btn-success" id="addApptButn">Add</button>
+  </div>
+  
+  <div class="col-sm-2">
+    <input   class="btn-danger" type="button" value="cancel" id="cancelApptButn"/>
+  </div>
+</div>
+
+
+<div class="row">
+
+<div class="col-sm-4">
+  <label >Date</label>
+   <input class="form-control" type="date" id="dateAppointment" name="dateAppointment"  >
+</div>
+
+<div class="col-sm-4">
+  <label>Time: </label> 
+  <input class="form-control" type="time" id="timeAppointment"  name="timeAppointment" />
+</div>
+
+<div class="col-sm-4">
+  <label>Description: </label>
+  <input  class="form-control" type="text" placeholder="Enter description "  name="descAppointment" />
+</div>
+
+</div>
+
+</form>
+ 
+
+<div class="messeagebar">
+  <h2> Search Your Appointment </h2>
+</div>
+
+
+<div class="row">
+ <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4">
+    <input type="text" class="form-control"  placeholder="Enter appointment description to search" id="searchAppointment" name="searchAppointment"/>
+  </div>
+
+  <div class="col-sm-2">
+    <button class="btn-primary" id="searchApptBut">Search</button>
+  </div>
+</div>
+
+
+<div class="row" id="searchResultDiv">
+</div>
+
+
+</body>
+</html>
